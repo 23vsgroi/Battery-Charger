@@ -9,7 +9,7 @@ Plecs {
   MaxStep       "1e-3"
   InitStep      "-1"
   FixedStep     "1e-3"
-  Refine        "1"
+  Refine        "15"
   ZCStepSize    "1e-9"
   RelTol        "1e-3"
   AbsTol        "-1"
@@ -72,8 +72,8 @@ Plecs {
   IncompatibleInitialConditionMsg "2"
   Schematic {
     Location      [769, 30; 1535, 772]
-    ZoomFactor    0.75
-    SliderPosition [140, 283]
+    ZoomFactor    0.437322
+    SliderPosition [16, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -408,17 +408,17 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [810, 249; 1369, 794]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAB4AAABmvwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [810, 249; 1369, 803]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAB4AAABo/wCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwEAAAA0AA"
-"AAxwAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAABAQAAAM0AAABiAP///wAAAAMAAAIvAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAi8AAABEAP///wAAAbEAAAGaAAAA"
+"AAywAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAABBQAAANIAAABiAP///wAAAAMAAAIvAAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAi8AAABEAP///wAAAbEAAAGjAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxAAAAAAAAA"
 "AA/8AAAAAAAAAAAAAEAf/gAAAAAAAB/+AAAAAAAAAE/uzeoDPnirD+9V/+bVjI7AA=="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":178,\"Labels\":["
-"\"Min\",\"Max\"],\"VisualIdxs\":[5,6]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":178,\"Labels\":[\""
+"Min\",\"Max\"],\"VisualIdxs\":[5,6]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAQAAAAEC//8u4P//zMwAAAAAAAEAAAABAAAAA"
 "AEAAAABAAAAAQAAAAEAAAABAAAAAAEAAAABP/AAAAAAAAAAAAABAAAAAQA="
       Axes          "1"
@@ -806,11 +806,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [810, 249; 1369, 794]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAB4AAABmvwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [810, 249; 1369, 803]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAB4AAABo/wCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwEAAAA0AA"
-"AAxwAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAABAQAAAM0AAABiAP///wAAAAMAAAIvAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAi8AAABEAP///wAAAbEAAAGaAAAA"
+"AAywAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAABBQAAANIAAABiAP///wAAAAMAAAIvAAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAi8AAABEAP///wAAAbEAAAGjAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxAAAAAAAAA"
@@ -1204,11 +1204,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [810, 249; 1369, 794]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAB4AAABmvwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [810, 249; 1369, 803]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAB4AAABo/wCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwEAAAA0AA"
-"AAxwAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAABAQAAAM0AAABiAP///wAAAAMAAAIvAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAi8AAABEAP///wAAAbEAAAGaAAAA"
+"AAywAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAABBQAAANIAAABiAP///wAAAAMAAAIvAAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAi8AAABEAP///wAAAbEAAAGjAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxAAAAAAAAA"
@@ -1602,11 +1602,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [810, 249; 1369, 803]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAB4AAABo/wCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [810, 249; 1369, 812]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAB4AAABrPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwEAAAA0AA"
-"AAywAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAABBQAAANIAAABiAP///wAAAAMAAAIvAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAi8AAABEAP///wAAAbEAAAGjAAAA"
+"AAzwAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAABCQAAANcAAABiAP///wAAAAMAAAIvAAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAi8AAABEAP///wAAAbEAAAGsAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxAAAAAAAAA"
@@ -2399,6 +2399,15 @@ Plecs {
       Name          "<html><body>\n<p><span style=\" font-size:25px;\">Min dut"
 "y</span></p></body></html>"
       Position      [90, 1250]
+    } 
+    Annotation {
+      Name          "<html><body>\n<p><span style=\" font-size:20px;\">This pl"
+"ecs simulation is based off of the results in the excel file &quot;Component "
+"calcs V1&quot;. </span></p>\n<p><span style=\" font-size:20px;\">It gives a s"
+"imulation for the operating points when duty cycle is max and min, for both <"
+"/span></p>\n<p><span style=\" font-size:20px;\">12V and 24V out. The rectifie"
+"r is not in this simulation.</span></p></body></html>"
+      Position      [1050, 485]
     } 
   }
 }
