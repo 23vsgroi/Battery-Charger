@@ -2,8 +2,8 @@ Plecs {
   Name          "LFP model test"
   Version       "5.0"
   CircuitModel  "ContStateSpace"
-  StartTime     "0.0"
-  TimeSpan      "1500.0"
+  StartTime     "0"
+  TimeSpan      "3600"
   Timeout       ""
   Solver        "auto"
   MaxStep       "1e-3"
@@ -28,10 +28,10 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "%% Battery Parameters\nn_series = 8; % Number of ser"
+  InitializationCommands "%% Battery Parameters\nn_series = 1; % Number of ser"
 "ies connected cells\nn_parallel = 1; % Number of parallel branches\nSOC_init "
-"= 0; % initial SOC\n\ncell_cap = 8; % Cell capacitance\npack_cap = cell_cap *"
-" n_parallel; % Pack capacitance\n\nMAX_SOC = 1; % State of charge when batter"
+"= 1; % initial SOC\n\ncell_cap = 8; % Cell capacitance\npack_cap = cell_cap *"
+" n_parallel; % Pack capacitance\n\nMAX_SOC = 0; % State of charge when batter"
 "y charging is stopped"
   InitialState  "1"
   SystemState   ""
@@ -75,8 +75,8 @@ Plecs {
   InvalidNetlistFunctionEvaluationMsg "1"
   IncompatibleInitialConditionMsg "2"
   Schematic {
-    Location      [0, 23; 1920, 989]
-    ZoomFactor    0.873841
+    Location      [1, 31; 959, 988]
+    ZoomFactor    0.667271
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -88,6 +88,7 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition west
+      CommentOut    DisabledOpenCircuit
       Frame         [-10, -20; 10, 20]
       SampleTime    "-1"
       CodeGenDiscretizationMethod "2"
@@ -1469,9 +1470,10 @@ Plecs {
       Direction     down
       Flipped       on
       LabelPosition east
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "I"
-        Value         "24"
+        Value         "8"
         Show          off
       }
     }
@@ -1483,6 +1485,7 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition west
+      CommentOut    DisabledOpenCircuit
     }
     Component {
       Type          From
@@ -1492,6 +1495,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "V_OC"
@@ -1527,6 +1531,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Frame         [-2, -10; 7, 10]
       Parameter {
         Variable      "Width"
@@ -1542,6 +1547,7 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "IconShape"
         Value         "2"
@@ -1571,6 +1577,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Frame         [-10, -10; 10, 10]
       Parameter {
         Variable      "Value"
@@ -1591,6 +1598,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition west
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "IconShape"
         Value         "1"
@@ -1620,17 +1628,18 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Frame         [-15, -15; 15, 15]
-      Location      [961, 31; 1919, 1028]
+      Location      [1, 31; 959, 1019]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAACRPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAA0AAAC5QAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAANAAAAkQAAABiAP///wAAAAMAAAO+AAAAYPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA74AAABEAP///wAAA74AAANgAAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAANAAAAkQAAABiAP///wAAAAMAAAO+AAAAj/w"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA74AAABEAP///wAAA74AAAMoAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":184,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":184,\"Labels\":["
+"\"Min\"],\"VisualIdxs\":[5]}"
       PlotPalettes  "AAAAAQAAAAIAAAABAAAAAgAAAAEC//8u4P//zMwAAAAAAAEC//8AAP///"
 "/8AAAAAAAIAAAABAAAAAAEAAAAAAgAAAAEAAAABAAAAAQAAAAEAAAACAAAAAQAAAAABAAAAAAIAAA"
 "ABP/AAAAAAAAAAAAABP/AAAAAAAAAAAAACAAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -1702,6 +1711,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Frame         [-2, -10; 7, 10]
       Parameter {
         Variable      "Width"
@@ -1717,23 +1727,24 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Frame         [-15, -15; 15, 15]
-      Location      [961, 31; 1919, 1019]
+      Location      [1, 31; 959, 1046]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAO+AAAAlfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA74AAABEAP///wAAA74AAAMiAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA74AAABEAP///wAAA74AAAM9AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":177,\"Labels\":["
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":183,\"Labels\":["
 "\"Delta\"],\"VisualIdxs\":[3]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -1775,6 +1786,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "V_OC"
@@ -1810,6 +1822,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Frame         [-2, -50; 7, 50]
       Parameter {
         Variable      "Width"
@@ -1825,6 +1838,7 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "IconShape"
         Value         "1"
@@ -1854,6 +1868,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Frame         [-10, -10; 10, 10]
       Parameter {
         Variable      "Value"
@@ -1874,6 +1889,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition north
+      CommentOut    DisabledOpenCircuit
     }
     Component {
       Type          Goto
@@ -1883,6 +1899,7 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition east
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "Vbat"
@@ -1918,6 +1935,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "Vbat"
@@ -1953,6 +1971,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "Vbat"
@@ -1988,7 +2007,6 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition west
-      CommentOut    DisabledOpenCircuit
       Frame         [-10, -20; 10, 20]
       SampleTime    "-1"
       CodeGenDiscretizationMethod "2"
@@ -3370,10 +3388,9 @@ Plecs {
       Direction     left
       Flipped       on
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "I"
-        Value         "24"
+        Value         "8"
         Show          off
       }
     }
@@ -3385,7 +3402,6 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition west
-      CommentOut    DisabledOpenCircuit
     }
     Component {
       Type          Scope
@@ -3395,18 +3411,17 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Frame         [-15, -15; 15, 15]
-      Location      [961, 31; 1919, 1019]
+      Location      [961, 31; 1919, 1037]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAC3fwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAA0AA"
-"AC3QAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAO+AAAAhPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA74AAABEAP///wAAA74AAAMzAAAA"
+"AC3QAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAO+AAAAVvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA74AAABEAP///wAAA74AAANzAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":178,\"Labels\":["
-"\"Delta\"],\"VisualIdxs\":[3]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":184,\"Labels\":[\""
+"Delta\"],\"VisualIdxs\":[3]}"
       PlotPalettes  "AAAAAQAAAAMAAAABAAAAAwAAAAEC//8u4P//zMwAAAAAAAEC//8AAP///"
 "/8AAAAAAAEC//9PsP////8AAAAAAAMAAAABAAAAAAEAAAAAAQAAAAADAAAAAQAAAAEAAAABAAAAAQ"
 "AAAAEAAAABAAAAAwAAAAEAAAAAAQAAAAABAAAAAAMAAAABP/AAAAAAAAAAAAABP/AAAAAAAAAAAAA"
@@ -3457,7 +3472,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Frame         [-2, -15; 7, 15]
       Parameter {
         Variable      "Width"
@@ -3473,7 +3487,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "V_OC"
@@ -3505,27 +3518,28 @@ Plecs {
       Type          Scope
       Name          "Scope6"
       Show          on
-      Position      [770, 515]
+      Position      [420, 210]
       Direction     up
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Frame         [-15, -15; 15, 15]
-      Location      [769, 30; 1535, 395]
+      Location      [1, 31; 959, 1019]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAL+AAAAVvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQDAAAC9AAAAzYAAAL4AAAAUAAAAv4AAAFOAAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAO+AAAAc/w"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA74AAABEAP///wAAA74AAANEAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":122,\"Labels\":[\""
-"Delta\"],\"VisualIdxs\":[3]}"
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":122,\"Labels\":["
+"\"Delta\",\"Min\",\"Abs Max\"],\"VisualIdxs\":[3,5,7]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -3563,10 +3577,11 @@ Plecs {
       Type          From
       Name          "From2"
       Show          off
-      Position      [690, 515]
+      Position      [285, 205]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "R0"
@@ -3602,6 +3617,7 @@ Plecs {
       Direction     left
       Flipped       on
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "s_init"
         Value         "0"
@@ -3626,6 +3642,7 @@ Plecs {
       Direction     down
       Flipped       on
       LabelPosition east
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "V"
         Value         "29.2"
@@ -3640,6 +3657,7 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "IconShape"
         Value         "1"
@@ -3669,6 +3687,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Frame         [-10, -10; 10, 10]
       Parameter {
         Variable      "Value"
@@ -3689,6 +3708,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "Vbat"
@@ -3724,6 +3744,7 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Frame         [-20, -10; 20, 10]
       Parameter {
         Variable      "Operator"
@@ -3744,9 +3765,26 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition east
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "R"
         Value         "10000000"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux"
+      Show          off
+      Position      [325, 210]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      CommentOut    DisabledOpenCircuit
+      Frame         [-2, -10; 7, 10]
+      Parameter {
+        Variable      "Width"
+        Value         "2"
         Show          off
       }
     }
@@ -3972,13 +4010,6 @@ Plecs {
       DstTerminal   4
     }
     Connection {
-      Type          Signal
-      SrcComponent  "From2"
-      SrcTerminal   1
-      DstComponent  "Scope6"
-      DstTerminal   1
-    }
-    Connection {
       Type          Wire
       SrcComponent  "Li-ion\nRC Model2"
       SrcTerminal   1
@@ -4023,14 +4054,6 @@ Plecs {
       DstTerminal   1
     }
     Connection {
-      Type          Signal
-      SrcComponent  "Compare to\nConstant"
-      SrcTerminal   2
-      Points        [355, 270]
-      DstComponent  "S2"
-      DstTerminal   4
-    }
-    Connection {
       Type          Wire
       SrcComponent  "S2"
       SrcTerminal   3
@@ -4052,6 +4075,36 @@ Plecs {
       Points        [490, 500; 655, 500]
       DstComponent  "Mux3"
       DstTerminal   5
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From2"
+      SrcTerminal   1
+      DstComponent  "Mux"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux"
+      SrcTerminal   1
+      DstComponent  "Scope6"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Compare to\nConstant"
+      SrcTerminal   2
+      Points        [300, 270]
+      Branch {
+        Points        [355, 270]
+        DstComponent  "S2"
+        DstTerminal   4
+      }
+      Branch {
+        Points        [300, 215]
+        DstComponent  "Mux"
+        DstTerminal   3
+      }
     }
     Annotation {
       Name          "<html><body>\n<p><span style=\" font-size:17px;\">Charge "
