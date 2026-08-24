@@ -1,31 +1,53 @@
 clear
-Io=24;
+%constant buck output current
+Io=8;
+%current ripple ratio
 CRm=0.30;
+%current ripple
+CR= CRm*Io;
+%voltage ripple ratio
 VRm=0.01;
+%generator output
+VLL = 10:0.1:155.56;
+%Buck output
+VO = 11.55:0.1:13.8;
+
 f = 50000;
-VLL = 16:155;
-VO = 10:0.25:14.6;
 Dmax = 0.9;
+
+%calculates all possible duty cycles
 D = VO./(VLL');
 row = size(D,1);
 col = size(D,2);
-
 %Removes impossible operating points where duty cycle > Dmax
-for i = 1:row
-    for j = 1:col
-        if D(i,j) > Dmax
-            D(i,j) = 0;
-        end
-    end
-end
+D(D>Dmax)=NaN;
 
+%inductor calculation
+
+%finds lowest duty cycle associated with each output
+Dfil= min(D,[],1,"omitmissing");
+%inductor calculation
+L=(VO.*((1-Dfil))/(CR*f));
+%finds maximum inductor value
+Lmax=max(L)
+
+
+
+%Filter capacitor calculation
+
+%rec output current
 Is = Io*D;
+%finds max rec output current for each value of VLL
 Ism=max(Is,[],2);
-Ismi=Ism';
+%calculates frequency associated with each VLL 
 fgen = (0.63*VLL) + 0.50;
+%calculates Vr for each value of VLL
 Vr=VLL*VRm;
+%Calculates max capacitor value
 C=Ism'./(6*(Vr.*fgen));
-Cm = max(C)
+Cm = max(C);
+
+
 
 %graph
 figure;
@@ -42,3 +64,4 @@ xlabel('V_{LL} (V)');
 title('Capacitance and Generated Frequency vs V_{LL} (12V)');
 legend('Capacitance', 'f_{gen}', 'Location', 'best');
 grid on;
+%}
