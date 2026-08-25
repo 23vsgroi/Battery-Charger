@@ -1,21 +1,23 @@
 clear
-Rmin=0.011
-%constant buck output current
-Io=8;
-%current ripple ratio
-CRm=0.30;
-%current ripple
-CR= CRm*Io;
-%voltage ripple ratio
-VRm=0.01;
-%generator output
-VLL = 27.6:0.1:155.56;
-%Buck output
-VO = 23.104:0.1:27.6;
-
+Rmin=0.011;
+VOC = [2.8,3.45];
 f = 50000;
 Dmax = 1;
+series = 8;
+%generator output
+VLL = linspace(series*VOC(2),155.56,1000);
+%current ripple ratio
+CRm=0.30;
+%voltage ripple ratio
+VRm=0.01;
 
+figure;
+hold on;
+for Io = 2:2:12
+%current ripple
+CR= CRm*Io;
+%Buck output
+VO = linspace(series*(VOC(1)+(Rmin*Io)),series*VOC(2),100);
 %calculates all possible duty cycles
 D = VO./(VLL');
 row = size(D,1);
@@ -30,7 +32,7 @@ Dfil= min(D,[],1,"omitmissing");
 %inductor calculation
 L=(VO.*((1-Dfil))/(CR*f));
 %finds maximum inductor value
-Lmax=max(L)
+Lmax=max(L);
 
 
 
@@ -46,23 +48,22 @@ fgen = (0.63*VLL) + 0.50;
 Vr=VLL*VRm;
 %Calculates max capacitor value
 C=Ism'./(6*(Vr.*fgen));
-Cm = max(C)
+Cm = max(C);
 
 
 
 %graph
-figure;
-
 yyaxis left
 plot(VLL, C, 'b-', 'LineWidth', 2);
 ylabel('Capacitance (F)');
+grid on;
+end
 
 yyaxis right
 plot(VLL, fgen, 'r--', 'LineWidth', 2);
 ylabel('Frequency (Hz)');   % or (kHz) if fgen is in kHz
 
 xlabel('V_{LL} (V)');
-title('Capacitance and Generated Frequency vs V_{LL} (24V)');
+title('Capacitance and Generated Frequency vs V_{LL} (V)');
 legend('Capacitance', 'f_{gen}', 'Location', 'best');
-grid on;
 %}
