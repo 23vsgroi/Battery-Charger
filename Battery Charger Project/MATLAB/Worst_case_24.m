@@ -1,4 +1,5 @@
 clear
+Rmin=0.011
 %constant buck output current
 Io=8;
 %current ripple ratio
@@ -8,12 +9,12 @@ CR= CRm*Io;
 %voltage ripple ratio
 VRm=0.01;
 %generator output
-VLL = 10:0.1:155.56;
+VLL = 27.6:0.1:155.56;
 %Buck output
-VO = 23.1:0.1:27.6;
+VO = 23.104:0.1:27.6;
 
 f = 50000;
-Dmax = 0.9;
+Dmax = 1;
 
 %calculates all possible duty cycles
 D = VO./(VLL');

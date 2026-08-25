@@ -1,20 +1,21 @@
 clear
-%constant buck output current
-Io=8;
+Rmin=0.011;
+VOC = [2.8,3.45];
+f = 50000;
+Dmax = 1;
+%generator output
+VLL = 20:0.1:155.56;
 %current ripple ratio
 CRm=0.30;
-%current ripple
-CR= CRm*Io;
 %voltage ripple ratio
 VRm=0.01;
-%generator output
-VLL = 10:0.1:155.56;
+
+figure;
+for Io = 1:1:16
+%current ripple
+CR= CRm*Io;
 %Buck output
-VO = 11.55:0.1:13.8;
-
-f = 50000;
-Dmax = 0.9;
-
+VO = (VOC(1)+(Rmin*Io)):0.1:(VOC(2)+(Rmin*Io));
 %calculates all possible duty cycles
 D = VO./(VLL');
 row = size(D,1);
@@ -50,8 +51,6 @@ Cm = max(C);
 
 
 %graph
-figure;
-
 yyaxis left
 plot(VLL, C, 'b-', 'LineWidth', 2);
 ylabel('Capacitance (F)');
@@ -64,4 +63,6 @@ xlabel('V_{LL} (V)');
 title('Capacitance and Generated Frequency vs V_{LL} (12V)');
 legend('Capacitance', 'f_{gen}', 'Location', 'best');
 grid on;
+hold on;
+end
 %}
