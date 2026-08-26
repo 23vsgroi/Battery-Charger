@@ -5,36 +5,22 @@ f = 50000;
 Dmax = 1;
 series = 8;
 %generator output
-VLL = linspace(series*VOC(2),155.56,1000);
+VLL = linspace(34,155.56,1000);
 %current ripple ratio
 CRm=0.30;
 %voltage ripple ratio
-VRm=0.01;
+VRm=0.05;
+
 
 figure;
 hold on;
-for Io = 2:2:12
-%current ripple
-CR= CRm*Io;
+for Io = [1,2,4,8,12,16,20,24]
 %Buck output
 VO = linspace(series*(VOC(1)+(Rmin*Io)),series*VOC(2),100);
 %calculates all possible duty cycles
 D = VO./(VLL');
-row = size(D,1);
-col = size(D,2);
 %Removes impossible operating points where duty cycle > Dmax
 D(D>Dmax)=NaN;
-
-%inductor calculation
-
-%finds lowest duty cycle associated with each output
-Dfil= min(D,[],1,"omitmissing");
-%inductor calculation
-L=(VO.*((1-Dfil))/(CR*f));
-%finds maximum inductor value
-Lmax=max(L);
-
-
 
 %Filter capacitor calculation
 
@@ -66,4 +52,21 @@ ylabel('Frequency (Hz)');   % or (kHz) if fgen is in kHz
 xlabel('V_{LL} (V)');
 title('Capacitance and Generated Frequency vs V_{LL} (V)');
 legend('Capacitance', 'f_{gen}', 'Location', 'best');
+
+%inductor calculation
+Io = 16;
+VO = linspace(series*(VOC(1)+(Rmin*Io)),series*VOC(2),100);
+%calculates all possible duty cycles
+D = VO./(VLL');
+%Removes impossible operating points where duty cycle > Dmax
+D(D>Dmax)=NaN;
+
+%current ripple
+CR= CRm*Io;
+%finds lowest duty cycle associated with each output
+Dfil= min(D,[],1,"omitmissing");
+%inductor calculation
+L=(VO.*((1-Dfil))/(CR*f));
+%finds maximum inductor value
+Lmax=max(L);
 %}

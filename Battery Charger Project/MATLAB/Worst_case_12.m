@@ -5,15 +5,15 @@ f = 50000;
 Dmax = 1;
 series = 4;
 %generator output
-VLL = linspace(20,155.56,1000);
+VLL = linspace(27,155.56,1000);
 %current ripple ratio
 CRm=0.30;
 %voltage ripple ratio
-VRm=0.01;
+VRm=0.05;
 
 figure;
 hold on;
-for Io = 2:2:12
+for Io = [1,2,4,8,12,16,20,24]
 %current ripple
 CR= CRm*Io;
 %Buck output

@@ -76,8 +76,8 @@ Plecs {
   IncompatibleInitialConditionMsg "2"
   Schematic {
     Location      [769, 30; 1535, 772]
-    ZoomFactor    1.08428
-    SliderPosition [224, -1]
+    ZoomFactor    0.632239
+    SliderPosition [158, 27]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -606,11 +606,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [1, 30; 767, 862]
+      Location      [1, 30; 767, 853]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAL+AAAAUfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAv4AAABEAP///wAAAv4AAALKAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAv4AAABEAP///wAAAv4AAALBAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -720,7 +720,7 @@ Plecs {
       LabelPosition west
       Parameter {
         Variable      "C"
-        Value         "0.084"
+        Value         "0.0068"
         Show          off
       }
       Parameter {
@@ -1333,7 +1333,7 @@ Plecs {
     }
     Component {
       Type          Subsystem
-      Name          "Li-ion\nRC Model2"
+      Name          "Li-ion\nRC Model3"
       Show          on
       Position      [1235, 375]
       Direction     up
@@ -1423,7 +1423,7 @@ Plecs {
         Direction     down
       }
       Schematic {
-        Location      [1, 24; 959, 825]
+        Location      [1, 30; 767, 772]
         ZoomFactor    1.30957
         SliderPosition [0, 0]
         ShowBrowser   off
@@ -1477,7 +1477,7 @@ Plecs {
             Direction     right
           }
           Schematic {
-            Location      [769, 30; 1535, 772]
+            Location      [30, 100; 796, 842]
             ZoomFactor    0.999997
             SliderPosition [0, 0]
             ShowBrowser   off
@@ -2131,7 +2131,7 @@ Plecs {
               }
               Parameter {
                 Variable      "f(x)"
-                Value         "[3.1 3.21 3.26 3.29 3.3 3.3 3.31 3.33 3.34 3.35"
+                Value         "[2.8 3.21 3.26 3.29 3.3 3.3 3.31 3.33 3.34 3.35"
 " 3.47 ]"
                 Show          off
               }
@@ -2782,7 +2782,7 @@ Plecs {
                   Points        [1145, 440]
                   Branch {
                     Points        [1235, 440]
-                    DstComponent  "Li-ion\nRC Model2"
+                    DstComponent  "Li-ion\nRC Model3"
                     DstTerminal   3
                   }
                   Branch {
@@ -2961,7 +2961,7 @@ Plecs {
         Points        [1145, 300]
         Branch {
           Points        [1235, 300]
-          DstComponent  "Li-ion\nRC Model2"
+          DstComponent  "Li-ion\nRC Model3"
           DstTerminal   1
         }
         Branch {
@@ -2972,7 +2972,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Li-ion\nRC Model2"
+      SrcComponent  "Li-ion\nRC Model3"
       SrcTerminal   2
       Points        [1250, 340; 1300, 340]
     }
