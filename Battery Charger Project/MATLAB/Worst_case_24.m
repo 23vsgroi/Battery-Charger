@@ -5,7 +5,7 @@ f = 50000;
 Dmax = 1;
 series = 8;
 %generator output
-VLL = linspace(30,155.56,1000);
+VLL = linspace(37.5,155.56,1000);
 %current ripple ratio
 CRm=0.30;
 %voltage ripple ratio
@@ -56,6 +56,7 @@ legend('Capacitance', 'f_{gen}', 'Location', 'best');
 
 %inductor calculation
 Io = 2;
+VLL = linspace(30,60,100);
 VO = linspace(series*(VOC(1)+(Rmin*Io)),series*VOC(2),100);
 %calculates all possible duty cycles
 D = VO./(VLL');

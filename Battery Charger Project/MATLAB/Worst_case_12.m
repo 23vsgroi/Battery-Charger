@@ -70,7 +70,7 @@ L=(VO.*((1-Dfil))/(CR*f));
 %finds maximum inductor value
 Lmax=max(L);
 %capacitor calculation
-L24=7.5677*10^(-4);
+L24=4.968*10^(-4);
 Dmin= min(D,[],"all");
 Cbuck=(1-Dmin)/(8*L24*VRmB*(f^2));
 %}
