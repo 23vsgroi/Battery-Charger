@@ -54,7 +54,8 @@ title('Capacitance and Generated Frequency vs V_{LL} (12V)');
 legend('Capacitance', 'f_{gen}', 'Location', 'best');
 
 %inductor calculation
-Io = 2;
+Io = 8;
+VLL=linspace(29.6,155.56,1000);
 VO = linspace(series*(VOC(1)+(Rmin*Io)),series*VOC(2),100);
 %calculates all possible duty cycles
 D = VO./(VLL');
@@ -70,7 +71,7 @@ L=(VO.*((1-Dfil))/(CR*f));
 %finds maximum inductor value
 Lmax=max(L);
 %capacitor calculation
-L24=7.5677*10^(-4);
+L24=4.968*10^(-4);
 Dmin= min(D,[],"all");
 Cbuck=(1-Dmin)/(8*L24*VRmB*(f^2));
 %}
