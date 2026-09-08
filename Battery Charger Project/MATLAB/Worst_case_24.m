@@ -55,8 +55,8 @@ title('Capacitance and Generated Frequency vs V_{LL} (V)');
 legend('Capacitance', 'f_{gen}', 'Location', 'best');
 
 %inductor calculation
-Io = 2;
-VLL = linspace(37.5,60,100);
+Io = 8;
+VLL = linspace(60,155,200);
 VO = linspace(series*(VOC(1)+(Rmin*Io)),series*VOC(2),100);
 %calculates all possible duty cycles
 D = VO./(VLL');

@@ -30,7 +30,7 @@ Plecs {
   FixedPointDatatypeOverride "1"
   InitializationCommands "%% Battery Parameters\nn_series = 8; % Number of ser"
 "ies connected cells\nn_parallel = 1; % Number of parallel branches\nSOC_init "
-"= 0.95; % initial SOC\n\ncell_cap = 8; % Cell capacitance\npack_cap = cell_ca"
+"= 0.50; % initial SOC\n\ncell_cap = 8; % Cell capacitance\npack_cap = cell_ca"
 "p * n_parallel; % Pack capacitance\n\nMAX_SOC = 1; % State of charge when bat"
 "tery charging is stopped"
   InitialState  "1"
@@ -75,9 +75,9 @@ Plecs {
   InvalidNetlistFunctionEvaluationMsg "1"
   IncompatibleInitialConditionMsg "2"
   Schematic {
-    Location      [1, 30; 767, 772]
-    ZoomFactor    1.08428
-    SliderPosition [907, 119]
+    Location      [0, 23; 1536, 773]
+    ZoomFactor    0.947494
+    SliderPosition [247, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -547,8 +547,8 @@ Plecs {
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxP+b3QJFhj"
 "Dc/5vdGovGScgAAAAEBQDaERERERENANwFsFsFsFgE/3BbgU6qzhj/gtV98CCv4AA=="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":183,\"Labels\":["
-"\"Delta\",\"Min\",\"Max\"],\"VisualIdxs\":[3,5,6]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":183,\"Labels\":[\""
+"Delta\",\"Min\",\"Max\"],\"VisualIdxs\":[3,5,6]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -761,16 +761,16 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [9, 56; 775, 879]
+      Location      [0, 23; 1536, 795]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAL+AAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQDAAAAFAAAAuYAAALqAAAARAAAAv4AAAMYAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQDAAAAFAAAAuYAAALqAAAARAAABgAAAALlAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":178,\"Labels\":["
-"\"Delta\",\"Min\",\"Max\"],\"VisualIdxs\":[3,5,6]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":178,\"Labels\":[\""
+"Delta\",\"Min\",\"Max\"],\"VisualIdxs\":[3,5,6]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -1132,7 +1132,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Amplitude"
-        Value         "60"
+        Value         "75"
         Show          off
       }
       Parameter {
@@ -1142,7 +1142,7 @@ Plecs {
       }
       Parameter {
         Variable      "Frequency"
-        Value         "38.3"
+        Value         "47.75"
         Show          off
       }
       Parameter {
@@ -1347,7 +1347,7 @@ Plecs {
             Direction     right
           }
           Schematic {
-            Location      [495, 100; 1261, 842]
+            Location      [0, 100; 766, 842]
             ZoomFactor    0.999997
             SliderPosition [0, 0]
             ShowBrowser   off
@@ -2002,7 +2002,7 @@ Plecs {
               Parameter {
                 Variable      "f(x)"
                 Value         "[2.8 3.21 3.26 3.29 3.3 3.3 3.31 3.33 3.34 3.35"
-" 3.47 ]"
+" 3.45 ]"
                 Show          off
               }
               Parameter {
@@ -2591,7 +2591,7 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [87, 44; 813, 867]
+      Location      [87, 41; 813, 864]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAL+AAAAVvw"
@@ -2599,8 +2599,8 @@ Plecs {
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":178,\"Labels\":["
-"\"Delta\"],\"VisualIdxs\":[3]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":178,\"Labels\":[\""
+"Delta\"],\"VisualIdxs\":[3]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -3032,7 +3032,7 @@ Plecs {
         Direction     up
       }
       Schematic {
-        Location      [448, 168; 1011, 436]
+        Location      [180, 236; 743, 504]
         ZoomFactor    1
         SliderPosition [0, 0]
         ShowBrowser   off
@@ -3134,7 +3134,7 @@ Plecs {
           Frame         [-10, -10; 10, 10]
           Parameter {
             Variable      "Value"
-            Value         "2"
+            Value         "8"
             Show          off
           }
           Parameter {

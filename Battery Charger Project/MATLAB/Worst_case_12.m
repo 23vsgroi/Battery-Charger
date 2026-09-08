@@ -55,7 +55,7 @@ legend('Capacitance', 'f_{gen}', 'Location', 'best');
 
 %inductor calculation
 Io = 8;
-VLL=linspace(29.6,155.56,1000);
+VLL=linspace(47.5,155.56,500);
 VO = linspace(series*(VOC(1)+(Rmin*Io)),series*VOC(2),100);
 %calculates all possible duty cycles
 D = VO./(VLL');
