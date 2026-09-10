@@ -1,0 +1,76 @@
+clear
+%Battery paramaters
+Rmin=0.011;
+VOC = [2.8,3.45];
+series = 8;
+%buck paramaters
+f = 50000;
+Dmax = 1;
+%generator output
+VLL = linspace(37.5,155.56,100);
+%current ripple ratio
+CRm=0.30;
+%voltage ripple ratio
+VRm=0.05;
+VRmB=0.01;
+
+
+figure;
+hold on;
+for Io = [1,2,4,8,12,16];
+%Buck output
+VO = linspace(series*(VOC(1)+(Rmin*Io)),series*VOC(2),100);
+%calculates all possible duty cycles
+D = VO./(VLL');
+%Removes impossible operating points where duty cycle > Dmax
+D(D>Dmax)=NaN;
+%Filter capacitor calculation
+%rec output current
+Is = Io*D;
+%finds max rec output current for each value of VLL
+Ism=max(Is,[],2);
+%calculates frequency associated with each VLL 
+fgen = (0.63*VLL) + 0.50;
+%calculates Vr for each value of VLL
+Vr=VLL*VRm;
+%Calculates max capacitor value
+C=Ism'./(6*(Vr.*fgen));
+Cm = max(C);
+%graph
+yyaxis left
+plot(VLL, C, 'b-', 'LineWidth', 2);
+ylabel('Rectifier Capacitor (F)');
+grid on;
+end
+
+yyaxis right
+plot(VLL, fgen, 'r--', 'LineWidth', 2);
+ylabel('Frequency (Hz)');   % or (kHz) if fgen is in kHz
+
+xlabel('V_{LL} (V)');
+title('Capacitance and Generated Frequency vs V_{LL} (V)');
+legend('Capacitance', 'f_{gen}', 'Location', 'best');
+
+%inductor calculation
+Io = 8;
+VLL = linspace(60,155,200);
+VO = linspace(series*(VOC(1)+(Rmin*Io)),series*VOC(2),100);
+%calculates all possible duty cycles
+D = VO./(VLL');
+%Removes impossible operating points where duty cycle > Dmax
+D(D>Dmax)=NaN;
+
+%current ripple
+CR= CRm*Io;
+%finds lowest duty cycle associated with each output
+Dfil= min(D,[],1,"omitmissing");
+%inductor calculation
+L=(VO.*((1-Dfil))/(CR*f));
+%finds maximum inductor value
+Lmax=max(L);
+
+%capacitor calculation
+L24=4.9680*10^(-4);
+Dmin= min(D,[],"all");
+Cbuck=(1-Dmin)/(8*L24*VRmB*(f^2));
+%}
