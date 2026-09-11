@@ -7,7 +7,7 @@ series = 4;
 %generator output
 VLL = linspace(29.5,155.56,1000);
 %current ripple ratio
-CRm=0.30;
+CRm=0.35;
 %voltage ripple ratio
 VRm=0.05;
 VRmB=0.01;
@@ -55,7 +55,7 @@ legend('Capacitance', 'f_{gen}', 'Location', 'best');
 
 %inductor calculation
 Io = 8;
-VLL=linspace(47.5,155.56,500);
+VLL=linspace(47.5,155,500);
 VO = linspace(series*(VOC(1)+(Rmin*Io)),series*VOC(2),100);
 %calculates all possible duty cycles
 D = VO./(VLL');
@@ -71,7 +71,7 @@ L=(VO.*((1-Dfil))/(CR*f));
 %finds maximum inductor value
 Lmax=max(L);
 %capacitor calculation
-L24=4.968*10^(-4);
+L24=4.2583e-4;
 Dmin= min(D,[],"all");
 Cbuck=(1-Dmin)/(8*L24*VRmB*(f^2));
 %}

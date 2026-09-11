@@ -9,7 +9,7 @@ Dmax = 1;
 %generator output
 VLL = linspace(29.5,155.56,100);
 %current ripple ratio
-CRm=0.30;
+CRm=0.40;
 %voltage ripple ratio
 VRm=0.05;
 VRmB=0.01;

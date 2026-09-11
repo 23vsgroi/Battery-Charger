@@ -3,13 +3,13 @@ Plecs {
   Version       "5.0"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "1500"
+  TimeSpan      "10"
   Timeout       ""
   Solver        "auto"
   MaxStep       "1e-3"
   InitStep      "-1"
   FixedStep     "1e-3"
-  Refine        "15"
+  Refine        "20"
   ZCStepSize    "1e-9"
   RelTol        "1e-3"
   AbsTol        "-1"
@@ -30,9 +30,9 @@ Plecs {
   FixedPointDatatypeOverride "1"
   InitializationCommands "%% Battery Parameters\nn_series = 8; % Number of ser"
 "ies connected cells\nn_parallel = 1; % Number of parallel branches\nSOC_init "
-"= 0.50; % initial SOC\n\ncell_cap = 8; % Cell capacitance\npack_cap = cell_ca"
-"p * n_parallel; % Pack capacitance\n\nMAX_SOC = 1; % State of charge when bat"
-"tery charging is stopped"
+"= 0; % initial SOC\n\ncell_cap = 8; % Cell capacitance\npack_cap = cell_cap *"
+" n_parallel; % Pack capacitance\n\nMAX_SOC = 1; % State of charge when batter"
+"y charging is stopped"
   InitialState  "1"
   SystemState   ""
   JacobianComputation "2"
@@ -75,9 +75,9 @@ Plecs {
   InvalidNetlistFunctionEvaluationMsg "1"
   IncompatibleInitialConditionMsg "2"
   Schematic {
-    Location      [0, 23; 1536, 773]
-    ZoomFactor    0.947494
-    SliderPosition [247, 0]
+    Location      [1, 30; 767, 772]
+    ZoomFactor    0.632239
+    SliderPosition [167, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -376,7 +376,7 @@ Plecs {
     }
     Component {
       Type          Inductor
-      Name          "L7"
+      Name          "4.2583e-4"
       Show          on
       Position      [990, 300]
       Direction     left
@@ -384,7 +384,7 @@ Plecs {
       LabelPosition north
       Parameter {
         Variable      "L"
-        Value         "4.968e-4"
+        Value         "4.2583e-4"
         Show          off
       }
       Parameter {
@@ -491,45 +491,6 @@ Plecs {
       LabelPosition south
     }
     Component {
-      Type          PulseGenerator
-      Name          "Pulse\nGenerator6"
-      Show          on
-      Position      [1010, 55]
-      Direction     down
-      Flipped       off
-      LabelPosition west
-      Parameter {
-        Variable      "Hi"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "Lo"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "f"
-        Value         "50e3"
-        Show          off
-      }
-      Parameter {
-        Variable      "DutyCycle"
-        Value         "0.20"
-        Show          off
-      }
-      Parameter {
-        Variable      "Delay"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "1"
-        Show          off
-      }
-    }
-    Component {
       Type          Scope
       Name          "Scope35"
       Show          on
@@ -547,8 +508,8 @@ Plecs {
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxP+b3QJFhj"
 "Dc/5vdGovGScgAAAAEBQDaERERERENANwFsFsFsFgE/3BbgU6qzhj/gtV98CCv4AA=="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":183,\"Labels\":[\""
-"Delta\",\"Min\",\"Max\"],\"VisualIdxs\":[3,5,6]}"
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":183,\"Labels\":["
+"\"Delta\",\"Min\",\"Max\"],\"VisualIdxs\":[3,5,6]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -693,7 +654,7 @@ Plecs {
     }
     Component {
       Type          Capacitor
-      Name          "C14"
+      Name          "1.086667e-5"
       Show          on
       Position      [1095, 375]
       Direction     down
@@ -701,7 +662,7 @@ Plecs {
       LabelPosition west
       Parameter {
         Variable      "C"
-        Value         "9.3170e-6"
+        Value         "1.086667e-5"
         Show          off
       }
       Parameter {
@@ -739,7 +700,7 @@ Plecs {
       LabelPosition west
       Parameter {
         Variable      "R"
-        Value         "0.001"
+        Value         "0.00001"
         Show          off
       }
     }
@@ -1132,7 +1093,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Amplitude"
-        Value         "75"
+        Value         "155"
         Show          off
       }
       Parameter {
@@ -1142,7 +1103,7 @@ Plecs {
       }
       Parameter {
         Variable      "Frequency"
-        Value         "47.75"
+        Value         "98"
         Show          off
       }
       Parameter {
@@ -1272,7 +1233,7 @@ Plecs {
         Variable      "R_contact"
         Prompt        "Metallic Contact Resistance"
         Type          FreeText
-        Value         "1e-3"
+        Value         "1"
         Show          off
         Tunable       off
         TabName       ""
@@ -2591,16 +2552,19 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [87, 41; 813, 864]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAL+AAAAVvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQDAAAAugAAAtEAAAL4AAAAVgAAAtYAAAMYAAAA"
+      Location      [0, 24; 1536, 847]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADGPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAA0AA"
+"ACnQAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAANAAAAxgAAABiAP///wAAAAMAAAL+AAAAVvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQDAAACRAAAAl8AAAL4AAAARAAABgAAAAMYAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":178,\"Labels\":[\""
-"Delta\"],\"VisualIdxs\":[3]}"
+      SavedViews    "AAAAAgAAAAIAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxP8K4hdCXV"
+"DM/wr0C3/Pv6wAAAAEBQCaNX4W7OVBAJ95OgIViTQE/szNxTbjeKT+zNGm3z4n/AAAAABgAUwBhAH"
+"YAZQBkACAAdgBpAGUAdwAgADI/wriF0JdUMz/CvQLf8+/rAAAAAQFAJo1fhbs5UEAn3k6AhWJNAT+"
+"zM3FNuN4pP7M0abfPif8A"
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":178,\"Labels\":["
+"\"Delta\"],\"VisualIdxs\":[3]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -2798,151 +2762,6 @@ Plecs {
       }
     }
     Component {
-      Type          CScript
-      Name          "C-Script1"
-      Show          on
-      Position      [875, 55]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "DialogGeometry"
-        Value         "[1 30 766 377]"
-        Show          off
-      }
-      Parameter {
-        Variable      "NumInputs"
-        Value         "[1 1]"
-        Show          off
-      }
-      Parameter {
-        Variable      "NumOutputs"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NumContStates"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "NumDiscStates"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NumZCSignals"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "DirectFeedthrough"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "Ts"
-        Value         "20e-6"
-        Show          off
-      }
-      Parameter {
-        Variable      "TerminalBasedSampleTimes"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "Parameters"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "LangStandard"
-        Value         "2"
-        Show          off
-      }
-      Parameter {
-        Variable      "GnuExtensions"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "RuntimeCheck"
-        Value         "2"
-        Show          off
-      }
-      Parameter {
-        Variable      "HighlightLevel"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "Declarations"
-        Value         "double Ts;\n"
-"double Ki;\n"
-"double Kp;\n"
-"double error;\n"
-"double duty;"
-        Show          off
-      }
-      Parameter {
-        Variable      "StartFcn"
-        Value         "Ts = 20e-6;\n"
-"Ki = 50;\n"
-"Kp = 0.1;\n"
-        Show          off
-      }
-      Parameter {
-        Variable      "OutputFcn"
-        Value         "/* Calculate error */\n"
-"error = InputSignal(0,0) - InputSignal(1,0);\n"
-"\n"
-"/* Calculate PI output */\n"
-"duty = Kp * error + DiscState(0);\n"
-"\n"
-"/* Limit duty cycle */\n"
-"if (duty > 1.0)\n"
-"{\n"
-"    duty = 1.0;\n"
-"}\n"
-"\n"
-"if (duty < 0.0)\n"
-"{\n"
-"    duty = 0.0;\n"
-"}\n"
-"\n"
-"\n"
-"OutputSignal(0,0)=duty;\n"
-        Show          off
-      }
-      Parameter {
-        Variable      "UpdateFcn"
-        Value         "error = InputSignal(0, 0) - InputSignal(1, 0);\n"
-"\n"
-"DiscState(0) += Ki * error * 20e-6;"
-        Show          off
-      }
-      Parameter {
-        Variable      "DerivativeFcn"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "TerminateFcn"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "StoreCustomStateFcn"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "RestoreCustomStateFcn"
-        Value         ""
-        Show          off
-      }
-    }
-    Component {
       Type          Ammeter
       Name          "Am17"
       Show          on
@@ -2960,17 +2779,17 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [769, 30; 1535, 853]
+      Location      [0, 24; 1536, 823]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAABRfwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAA0AA"
-"AAYgAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAANAAAAUUAAABiAP///wAAAAMAAAL+AAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAv4AAABEAP///wAAAv4AAAKwAAAA"
+"AAYgAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAANAAAAUUAAABiAP///wAAAAMAAAYAAAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABgAAAABEAP///wAABgAAAAKYAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxP+b3QJFhj"
 "Dc/5vdGovGScgAAAAEBQDaERERERENANwFsFsFsFgE/3BbgU6qzhj/gtV98CCv4AA=="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":177,\"Labels\":[\""
-"Delta\",\"Min\",\"Max\"],\"VisualIdxs\":[3,5,6]}"
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":177,\"Labels\":["
+"\"Delta\",\"Min\",\"Max\"],\"VisualIdxs\":[3,5,6]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -3012,13 +2831,13 @@ Plecs {
     }
     Component {
       Type          Subsystem
-      Name          "Controller"
+      Name          "Controller (50kHz)"
       Show          on
-      Position      [940, 485]
+      Position      [950, 510]
       Direction     up
       Flipped       off
       LabelPosition none
-      Frame         [-35, -20; 35, 20]
+      Frame         [-45, -20; 45, 20]
       SampleTime    "-1"
       CodeGenDiscretizationMethod "2"
       CodeGenTarget "Generic"
@@ -3028,7 +2847,7 @@ Plecs {
       MaskIconRotates on
       Terminal {
         Type          Output
-        Position      [-15, -24]
+        Position      [-25, -24]
         Direction     up
       }
       Schematic {
@@ -3252,7 +3071,7 @@ Plecs {
           }
           Parameter {
             Variable      "Precision"
-            Value         "4"
+            Value         "5"
             Show          off
           }
         }
@@ -3618,6 +3437,64 @@ Plecs {
         }
       }
     }
+    Component {
+      Type          Scope
+      Name          "Scope"
+      Show          on
+      Position      [1030, 470]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-15, -15; 15, 15]
+      Location      [0, 24; 1536, 805]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAYAAAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABgAAAABEAP///wAABgAAAAKGAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":64,\"Labels\":[\"D"
+"elta\"],\"VisualIdxs\":[3]}"
+      PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "D43"
@@ -3681,7 +3558,7 @@ Plecs {
               Branch {
                 Points        [1095, 440]
                 Branch {
-                  DstComponent  "C14"
+                  DstComponent  "1.086667e-5"
                   DstTerminal   2
                 }
                 Branch {
@@ -3716,7 +3593,7 @@ Plecs {
       SrcTerminal   2
       Points        [955, 300]
       Branch {
-        DstComponent  "L7"
+        DstComponent  "4.2583e-4"
         DstTerminal   1
       }
       Branch {
@@ -3809,7 +3686,7 @@ Plecs {
       SrcTerminal   2
       Points        [1095, 300]
       Branch {
-        DstComponent  "C14"
+        DstComponent  "1.086667e-5"
         DstTerminal   1
       }
       Branch {
@@ -3926,25 +3803,26 @@ Plecs {
       DstTerminal   1
     }
     Connection {
-      Type          Signal
-      SrcComponent  "Controller"
-      SrcTerminal   1
-      DstComponent  "FET7"
-      DstTerminal   3
-    }
-    Connection {
       Type          Wire
       SrcComponent  "Am15"
       SrcTerminal   1
-      DstComponent  "L7"
+      DstComponent  "4.2583e-4"
       DstTerminal   2
     }
-    Annotation {
-      Name          "<html><body>\n<p><span style=\" font-size:20px;\">Random "
-"operating</span></p>\n<p><span style=\" font-size:20px;\">Point (24V)</span><"
-"/p></body></html>"
-      Position      [90, 355]
-    } 
+    Connection {
+      Type          Signal
+      SrcComponent  "Controller (50kHz)"
+      SrcTerminal   1
+      Points        [925, 470]
+      Branch {
+        DstComponent  "FET7"
+        DstTerminal   3
+      }
+      Branch {
+        DstComponent  "Scope"
+        DstTerminal   1
+      }
+    }
   }
   Script {
     Name          "Script"
