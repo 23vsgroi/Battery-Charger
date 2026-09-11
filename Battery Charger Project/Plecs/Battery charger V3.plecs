@@ -28,7 +28,7 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "%% Battery Parameters\nn_series = 8; % Number of ser"
+  InitializationCommands "%% Battery Parameters\nn_series = 4; % Number of ser"
 "ies connected cells\nn_parallel = 1; % Number of parallel branches\nSOC_init "
 "= 0; % initial SOC\n\ncell_cap = 8; % Cell capacitance\npack_cap = cell_cap *"
 " n_parallel; % Pack capacitance\n\nMAX_SOC = 1; % State of charge when batter"
@@ -77,7 +77,7 @@ Plecs {
   Schematic {
     Location      [1, 30; 767, 772]
     ZoomFactor    0.632239
-    SliderPosition [167, 0]
+    SliderPosition [203, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -2556,7 +2556,7 @@ Plecs {
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADGPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAA0AA"
 "ACnQAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAANAAAAxgAAABiAP///wAAAAMAAAL+AAAAVvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQDAAACRAAAAl8AAAL4AAAARAAABgAAAAMYAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQDAAACIAAAArYAAAL4AAAARAAABgAAAAMYAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAIAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxP8K4hdCXV"
@@ -3115,7 +3115,7 @@ Plecs {
           Frame         [-10, -10; 10, 10]
           Parameter {
             Variable      "Value"
-            Value         "8"
+            Value         "4"
             Show          off
           }
           Parameter {
@@ -3495,6 +3495,73 @@ Plecs {
         }
       }
     }
+    Component {
+      Type          Ammeter
+      Name          "Am1"
+      Show          on
+      Position      [1095, 330]
+      Direction     up
+      Flipped       off
+      LabelPosition west
+    }
+    Component {
+      Type          Scope
+      Name          "Scope1"
+      Show          on
+      Position      [1145, 235]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-15, -15; 15, 15]
+      Location      [448, 168; 798, 417]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAAV4AAADaAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":64,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "D43"
@@ -3686,7 +3753,7 @@ Plecs {
       SrcTerminal   2
       Points        [1095, 300]
       Branch {
-        DstComponent  "1.086667e-5"
+        DstComponent  "Am1"
         DstTerminal   1
       }
       Branch {
@@ -3822,6 +3889,21 @@ Plecs {
         DstComponent  "Scope"
         DstTerminal   1
       }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Am1"
+      SrcTerminal   2
+      DstComponent  "1.086667e-5"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Am1"
+      SrcTerminal   3
+      Points        [1110, 235]
+      DstComponent  "Scope1"
+      DstTerminal   1
     }
   }
   Script {
