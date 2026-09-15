@@ -73,5 +73,5 @@ Lmax=max(L);
 %capacitor calculation
 L24=4.2583e-4;
 Dmin= min(D,[],"all");
-Cbuck=(1-Dmin)/(8*L24*VRmB*(f^2))
+Cbuck=(((1-Dmin)/(8*L24*VRmB*(f^2)))-(1/(2*pi*f*0.008 )));
 %}
