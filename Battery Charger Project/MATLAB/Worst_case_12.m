@@ -9,7 +9,7 @@ VLL = linspace(29.5,155.56,1000);
 %current ripple ratio
 CRm=0.35;
 %voltage ripple ratio
-VRm=0.05;
+VRm=0.1;
 VRmB=0.01;
 
 figure;
