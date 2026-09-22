@@ -28,11 +28,11 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "%% Battery Parameters\nn_series = 4; % Number of ser"
+  InitializationCommands "%% Battery Parameters\nn_series = 8; % Number of ser"
 "ies connected cells\nn_parallel = 1; % Number of parallel branches\nSOC_init "
-"= 0; % initial SOC\n\ncell_cap = 8; % Cell capacitance\npack_cap = cell_cap *"
-" n_parallel; % Pack capacitance\n\nMAX_SOC = 1; % State of charge when batter"
-"y charging is stopped"
+"= 0.99; % initial SOC\n\ncell_cap = 8; % Cell capacitance\npack_cap = cell_ca"
+"p * n_parallel; % Pack capacitance\n\nMAX_SOC = 1; % State of charge when bat"
+"tery charging is stopped"
   InitialState  "1"
   SystemState   ""
   JacobianComputation "2"
@@ -75,9 +75,9 @@ Plecs {
   InvalidNetlistFunctionEvaluationMsg "1"
   IncompatibleInitialConditionMsg "2"
   Schematic {
-    Location      [1, 30; 767, 772]
-    ZoomFactor    0.632238
-    SliderPosition [179, 0]
+    Location      [0, 23; 1536, 773]
+    ZoomFactor    1.08428
+    SliderPosition [523, 108]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -1218,7 +1218,7 @@ Plecs {
         Direction     down
       }
       Schematic {
-        Location      [1, 30; 767, 772]
+        Location      [-30, 211; 736, 953]
         ZoomFactor    1.30957
         SliderPosition [0, 0]
         ShowBrowser   off
@@ -2516,11 +2516,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 50; 810, 859]
+      Location      [0, 50; 810, 868]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADGPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAA0AA"
 "ACnQAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAANAAAAxgAAABiAP///wAAAAMAAAL+AAAAVvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQCAAAAAgAAAtgAAAL4AAAARAAAAyoAAAMKAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQCAAAAAgAAAtgAAAL4AAAARAAAAyoAAAMTAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAIAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxP8K4hdCXV"
@@ -2743,11 +2743,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1536, 847]
+      Location      [0, 24; 1536, 892]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAABRfwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAA0AA"
 "AAYgAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAANAAAAUUAAABiAP///wAAAAMAAAYAAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABgAAAABEAP///wAABgAAAAKwAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABgAAAABEAP///wAABgAAAALdAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxP+b3QJFhj"
@@ -3079,7 +3079,7 @@ Plecs {
           Frame         [-10, -10; 10, 10]
           Parameter {
             Variable      "Value"
-            Value         "4"
+            Value         "8"
             Show          off
           }
           Parameter {
@@ -3755,16 +3755,16 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [448, 168; 798, 453]
+      Location      [-27, 404; 1893, 1419]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAFeAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAV4AAABEAP///wAAAV4AAACWAAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAIAAAeAAAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAAB4AAAANwAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":177,\"Labels\":["
-"],\"VisualIdxs\":[]}"
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":183,\"Labels\":["
+"\"RMS\"],\"VisualIdxs\":[9]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -3827,22 +3827,22 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [769, 30; 1535, 830]
+      Location      [769, 30; 1535, 839]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAIAAAL+AAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAv4AAABEAP///wAAAv4AAAKZAAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAIAAAL+AAAAUfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAv4AAABEAP///wAAAv4AAAKzAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":155,\"Labels\":["
-"\"Delta\",\"Mean\",\"RMS\"],\"VisualIdxs\":[3,8,9]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":155,\"Labels\":[\""
+"Delta\",\"Mean\",\"RMS\"],\"VisualIdxs\":[3,8,9]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -4322,14 +4322,14 @@ Plecs {
       Type          Signal
       SrcComponent  "Am3"
       SrcTerminal   3
-      Points        [810, 335]
+      Points        [795, 335]
       Branch {
-        Points        [810, 560]
+        Points        [810, 335; 810, 560]
         DstComponent  "Scope3"
         DstTerminal   1
       }
       Branch {
-        Points        [810, 240; 780, 240; 780, 145]
+        Points        [795, 240; 780, 240; 780, 145]
         DstComponent  "Scope2"
         DstTerminal   3
       }
