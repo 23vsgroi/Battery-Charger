@@ -1,0 +1,130 @@
+(footprint "LC200-0185"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "L1"
+		(at -13.2 3.49 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "b728ef69-0a08-4cf7-98fe-96c8491a902f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "L"
+		(at 0 -18.542 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "62ef05e9-e28b-43cd-af6e-00ca68b90002")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at -0.254 -22.614 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c4c7c1bf-6ee4-4316-82aa-2ab6ffdfc24a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Inductor"
+		(at -0.254 -22.614 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3db9b08e-4bd0-4a72-9431-cc9fe9a09db3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
+	(sheetname "Root")
+	(sheetfile "TEST1_v2.kicad_sch")
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -11 -21.41)
+		(end 47 -21.41)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "1dc328cc-163d-4d9e-81b6-cf238976ff82")
+	)
+	(fp_line
+		(start -11 6.59)
+		(end -11 -21.41)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "02ffb03f-53b7-40f5-ba13-2b1b2581f8d8")
+	)
+	(fp_line
+		(start -11 6.59)
+		(end 47 6.59)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "3b3b122d-3d40-4fab-8adc-61b8ebcf315e")
+	)
+	(fp_line
+		(start 47 6.59)
+		(end 47 -21.41)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "5ee8fd39-09e2-4b2d-b64a-1be0b20cd3ec")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.254 -20.114 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "2f05d18f-ae22-4e9f-9b05-7a8b21cb9a46")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 38.1 0)
+		(size 3 3)
+		(drill 1.4)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2b1aefca-ffe8-4a94-997d-185c9ed99104")
+	)
+	(pad "2" thru_hole circle
+		(at 0 -15.24)
+		(size 3 3)
+		(drill 1.4)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f72e69f1-dabc-42e0-910c-eb16c25aac20")
+	)
+	(embedded_fonts no)
+)

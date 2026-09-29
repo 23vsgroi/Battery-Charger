@@ -1,4 +1,11 @@
 (fp_lib_table
 	(version 7)
-	(lib (name "284391-2") (type "KiCad") (uri "${KIPRJMOD}/Footprints/KiCADv6/footprints.pretty") (options "") (descr ""))
+	(lib (name "284391-2") (type "KiCad") (uri "${KIPRJMOD}/Footprints/284391-2/footprints.pretty") (options "") (descr ""))
+	(lib (name "277-1578-ND") (type "KiCad") (uri "${KIPRJMOD}/Footprints/227-1578-ND/footprints.pretty") (options "") (descr ""))
+	(lib (name "284391-3") (type "KiCad") (uri "${KIPRJMOD}/Footprints/284391-3/footprints.pretty") (options "") (descr ""))
+	(lib (name "TMCS1133C5AQDVGR") (type "KiCad") (uri "${KIPRJMOD}/Footprints/TMCS1133C5AQDVGR.pretty") (options "") (descr ""))
+	(lib (name "EEU-FR1H100") (type "KiCad") (uri "${KIPRJMOD}/Footprints/EEU-FR1H100/footprints.pretty") (options "") (descr ""))
+	(lib (name "LGW2D561MELA30") (type "KiCad") (uri "${KIPRJMOD}/Footprints/LGW2D561MELA30/footprints.pretty") (options "") (descr ""))
+	(lib (name "LC200-0185") (type "KiCad") (uri "${KIPRJMOD}/Footprints/LC200-0185.pretty") (options "") (descr ""))
+	(lib (name "DPF30U200FC") (type "KiCad") (uri "${KIPRJMOD}/Footprints/DPF30U200FC.pretty") (options "") (descr ""))
 )

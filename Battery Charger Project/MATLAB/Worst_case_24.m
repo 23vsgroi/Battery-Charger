@@ -5,7 +5,7 @@ f = 50000;
 Dmax = 1;
 series = 8;
 %generator output
-VLL = linspace(40,155,100);
+VLL = linspace(30,155,100);
 %current ripple ratio
 CRm=0.35;
 %voltage ripple ratio
@@ -56,7 +56,7 @@ ylabel('Frequency (Hz)');   % or (kHz) if fgen is in kHz
 
 xlabel('V_{LL} (V)');
 title('Capacitance and Generated Frequency vs V_{LL} (V)');
-legend('Capacitance', 'f_{gen}', 'Location', 'best');
+
 
 %inductor calculation
 Io = 2;
