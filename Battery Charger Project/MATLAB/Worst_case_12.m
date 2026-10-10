@@ -14,7 +14,7 @@ VRmB=0.01;
 
 figure;
 hold on;
-for Io = [1,2,4,8,12];
+for Io = 8;
 %Buck output
 VO = linspace(series*(VOC(1)+(Rmin*Io)),series*VOC(2),100);
 %calculates all possible duty cycles

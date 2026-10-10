@@ -8,4 +8,5 @@
 	(lib (name "LGW2D561MELA30") (type "KiCad") (uri "${KIPRJMOD}/Footprints/LGW2D561MELA30/footprints.pretty") (options "") (descr ""))
 	(lib (name "LC200-0185") (type "KiCad") (uri "${KIPRJMOD}/Footprints/LC200-0185.pretty") (options "") (descr ""))
 	(lib (name "DPF30U200FC") (type "KiCad") (uri "${KIPRJMOD}/Footprints/DPF30U200FC.pretty") (options "") (descr ""))
+	(lib (name "LAUNCHXL-F28379D") (type "KiCad") (uri "${KIPRJMOD}/Footprints/LAUNCHXL-F28379D.pretty") (options "") (descr ""))
 )
