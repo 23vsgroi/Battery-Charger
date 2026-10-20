@@ -5660,6 +5660,12 @@
 		(uuid "2512ad54-8890-4153-b80c-2b4fbcfb3884")
 	)
 	(junction
+		(at 224.79 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2d041167-1b28-4e1a-8a8f-769d96235e97")
+	)
+	(junction
 		(at 200.66 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6297,6 +6303,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 52.07) (xy 224.79 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "375ec7d8-8ed2-428e-acb8-9c7cd7f3e045")
+	)
+	(wire
+		(pts
 			(xy 245.11 45.72) (xy 245.11 44.45)
 		)
 		(stroke
@@ -6357,7 +6373,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 54.61) (xy 227.33 54.61)
+			(xy 200.66 54.61) (xy 224.79 54.61)
 		)
 		(stroke
 			(width 0)
@@ -6957,6 +6973,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 54.61) (xy 227.33 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f596dbc3-cfdc-4d05-a813-2f74ee9ae19f")
+	)
+	(wire
+		(pts
 			(xy 102.87 80.01) (xy 100.33 80.01)
 		)
 		(stroke
@@ -7004,6 +7030,16 @@
 			(justify left bottom)
 		)
 		(uuid "566f1ccc-b741-404a-9ea3-69ecf5a82b34")
+	)
+	(label "Voh"
+		(at 223.52 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8c092e29-ae76-4d0b-a0f7-f015f14da553")
 	)
 	(label "Vo"
 		(at 210.82 58.42 0)
