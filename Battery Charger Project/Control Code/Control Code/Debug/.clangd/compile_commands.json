@@ -1,0 +1,7 @@
+[
+   {
+      "directory" : "C:/Users/Verrazano/Acedemic/Research/Battery-Charger/Battery Charger Project/Control Code/Control Code/Debug",
+      "command"   : "clang++ -I\"C:/Users/Verrazano/Acedemic/Research/Battery-Charger/Battery Charger Project/Control Code/Control Code\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -xc",
+      "file"      : "C:/Users/Verrazano/Acedemic/Research/Battery-Charger/Battery Charger Project/Control Code/Control Code/main.c"
+   }
+]
